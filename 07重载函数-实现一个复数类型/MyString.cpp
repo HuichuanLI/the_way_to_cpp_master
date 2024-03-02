@@ -64,6 +64,29 @@ public:
 
     const char *c_str() const { return p_str; }
 
+    class iterator {
+    public:
+        iterator(char *p = nullptr) : _p(p) {}
+
+        bool operator!=(const iterator &it) {
+            return _p != it._p;
+        }
+
+        void operator++() {
+            ++_p;
+        }
+
+        char &operator*() { return *_p; }
+
+    private:
+        char *_p;
+    };
+
+    // 首元素迭代器表示
+    iterator begin() { return iterator(p_str); }
+
+    // 末尾元素迭代器表示
+    iterator end() { return iterator(p_str + length()); }
 
 private:
     char *p_str;
@@ -89,7 +112,7 @@ MyString operator+(const MyString &lhs, const MyString &rhs) {
 int main() {
     MyString str1 = "abf";
     MyString str2 = "abc";
-    MyString  str3 = str1 + str2;
+    MyString str3 = str1 + str2;
     cout << str3 << endl;
     cout << "--------------------" << endl;
 
