@@ -36,7 +36,7 @@ public:
     CSmartPtr<T> &operator=(const CSmartPtr<T> &src) {
         if (this == &src)
             return *this;
-        
+
         mptr = src.mptr;
         return *this;
     }
