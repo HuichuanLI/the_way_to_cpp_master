@@ -3,4 +3,4 @@ project(the_way_to_cpp_master)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(the_way_to_cpp_master Mynew.cpp)
+add_executable(the_way_to_cpp_master 对象池.cpp)
