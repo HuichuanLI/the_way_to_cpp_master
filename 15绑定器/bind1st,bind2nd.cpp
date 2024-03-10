@@ -24,7 +24,7 @@ Iterator my_find_if(Iterator first, Iterator last, Compare comp) {
     }
     return last;
 }
-// 其实就是封装了一下，对于val固定值
+// 其实就是封装了一下，对于val固定值,返回的还是一个函数类型
 template<typename Compare, typename T>
 class _mybind1st {
 private:
