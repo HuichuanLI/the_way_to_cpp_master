@@ -3,4 +3,4 @@ project(the_way_to_cpp_master)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(the_way_to_cpp_master 语言级别多线程.cpp)
+add_executable(the_way_to_cpp_master atomic原子操作.cpp)
